@@ -1,0 +1,43 @@
+$maincolor: #e4484c;
+$contrastcolor: white;
+
+@mixin white-text-red-bg{
+    color: $contrastcolor;
+    background-color: $maincolor;
+}
+
+nav {
+    @include white-text-red-bg;
+    display:flex;
+    justify-content: flex-start;
+    font-size: 30px;
+    height: 50px;
+    padding: 5px
+}
+
+$imagesize:300px;
+$cardpadding:10px;
+
+img{
+    width:$imagesize;
+    height:$imagesize;
+    border-radius: 90px;
+    object-fit: cover;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat (auto-fit, minmax(calc($imagesize + $cardpadding), max-content));
+    grid-gap: 16px;
+    justify-content: center;
+    .card{
+        border:2px grey;
+        border: 5px;
+        padding:$cardpadding
+    }
+}
+.cheese{
+    padding:20px
+    
+}
+
